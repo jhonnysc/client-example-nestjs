@@ -1,0 +1,48 @@
+version: "3"
+
+networks:
+  project:
+    external: true
+
+services:
+  backend:
+    container_name: backend
+    image: node:latest
+    working_dir: /usr/src/app
+    restart: always
+    command: bash -c "cd backend && yarn && yarn start"
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./:/usr/src/app
+    depends_on:
+      - mongo
+    networks:
+      - project
+  frontend:
+    container_name: frontend
+    image: node:latest
+    working_dir: /usr/src/app
+    restart: always
+    command: bash -c "cd frontend && yarn && yarn start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
+    networks:
+      - project
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - "27020:27020"
+    volumes:
+      - ./.docker/db/mongodb:/data/db
+      - ./.docker/db/mongo-init.js:/docker-entrypoint-initdb.d/mmongo-init.js
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "root"
+      MONGO_INITDB_ROOT_PASSWORD: "root"
+      MONGO_INIT_DB_DATABASE: project
+    networks:
+      - project
