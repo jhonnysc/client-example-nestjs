@@ -26,17 +26,17 @@ services:
     restart: always
     command: bash -c "cd frontend && yarn && yarn start"
     ports:
-      - "3000:3000"
+      - "4001:3000"
     volumes:
       - ./:/usr/src/app
     networks:
       - project
   mongo:
-    container_name: mongo
+    container_name: project-mongo
     image: mongo
     restart: always
     ports:
-      - "27020:27020"
+      - "27020:27017"
     volumes:
       - ./.docker/db/mongodb:/data/db
       - ./.docker/db/mongo-init.js:/docker-entrypoint-initdb.d/mmongo-init.js
