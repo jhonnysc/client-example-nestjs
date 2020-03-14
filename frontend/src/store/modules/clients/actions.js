@@ -13,7 +13,7 @@ export function sendCreateClientRequestSuccess() {
 
 export function sendCreateClientRequestFailure(errors) {
   return {
-    type: 'clients/SEND_CREATE_REQUEST',
+    type: 'clients/SEND_CREATE_REQUEST_FAILURE',
     payload: errors,
   };
 }

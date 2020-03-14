@@ -11,21 +11,21 @@ export default function Home() {
   const pending = useSelector(state => state.clients.clients.save.pending);
 
   const schema = Yup.object().shape({
-    name: Yup.string().required('Nome é obrigatorio'),
-    document: Yup.string().required('Documento é obrigatorio'),
-    company: Yup.string().required('Empresa é obrigatorio'),
-    trading_name: Yup.string().required('Nome Fantasia é obrigatorio'),
-    country_code: Yup.string().required('Codigo do pais é obrigatorio'),
-    area_code: Yup.string().required('Codigo de area é obrigatorio'),
-    phone: Yup.string().required('Telefone é obrigatorio'),
+    name: Yup.string().required('Nome é obrigatório'),
+    document: Yup.string().required('Documento é obrigatório'),
+    company: Yup.string().required('Empresa é obrigatório'),
+    trading_name: Yup.string().required('Nome Fantasia é obrigatório'),
+    country_code: Yup.string().required('Codigo do pais é obrigatório'),
+    area_code: Yup.string().required('Codigo de area é obrigatório'),
+    phone: Yup.string().required('Telefone é obrigatório'),
     email: Yup.string()
       .email('Email deve ser valido')
-      .required('Email é obrigatorio'),
+      .required('Email é obrigatório'),
     address: Yup.object().shape({
-      street: Yup.string().required('Rua é obrigatorio'),
-      number: Yup.string().required('Numero é obrigatorio'),
-      zip_code: Yup.string().required('CEP é obrigatorio'),
-      address_type: Yup.string().required('Tipo de endereco é obrigatorio'),
+      street: Yup.string().required('Rua é obrigatório'),
+      number: Yup.string().required('Numero é obrigatório'),
+      zip_code: Yup.string().required('CEP é obrigatório'),
+      address_type: Yup.string().required('Tipo de endereco é obrigatório'),
       reference: Yup.string(),
     }),
   });

@@ -24,4 +24,8 @@ export class ClientRepository {
   async findById(client_id: Schema.Types.ObjectId) {
     return this.clientModel.findById(client_id);
   }
+
+  async findOne(payload: object) {
+    return this.clientModel.findOne(payload);
+  }
 }

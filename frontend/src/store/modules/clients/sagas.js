@@ -14,8 +14,9 @@ export function* saveClient({ payload }) {
     toast.success('Cliente Salvo com sucesso');
     yield put(sendCreateClientRequestSuccess());
   } catch (e) {
-    toast.error('Erro ao salvar o cliente');
     if (e.response) yield put(sendCreateClientRequestFailure(e.response.data));
+    if (e.response && e.response.data.message)
+      toast.error(e.response.data.message);
   }
 }
 
