@@ -26,7 +26,7 @@ services:
     restart: always
     command: bash -c "cd frontend && yarn && yarn start"
     ports:
-      - "4001:3000"
+      - "4001:4001"
     volumes:
       - ./:/usr/src/app
     networks:
