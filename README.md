@@ -1,6 +1,6 @@
 # Projeto Cadastro Cliente Front-Back
 
-Este projeto é um simples exemplo de um formulario basico com validações integrado com um backend feito em node js usando o nestjs framework
+Este projeto é um simples exemplo de um formulario basico com validações integrado com um backend feito em node js usando o nestjs framework com o banco MongoDB
 
 ## Instruções
 
