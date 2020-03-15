@@ -4,6 +4,8 @@ Este projeto é um simples exemplo de um formulario basico com validações inte
 
 ## Instruções
 
+Atenção, na primeira vez que os comandos forem executados, pode demorar um pouco para iniciar devido a ele baixar as depedencias, aguarde um pouco até que o processo conclua.
+
 ### Usando Docker com banco local (criado pelo proprio docker):
 
 No direito root digite:
