@@ -1,6 +1,6 @@
 # Projeto Cadastro Cliente Front-Back
 
-Este projeto é um simples exemplo de um formulario basico com validações integrado com um backend feito em node js usando o nestjs framework com o banco MongoDB
+Este projeto é um simples exemplo de um formulario basico com validações integrado com um backend feito em node js usando o nestjs framework usando MongoDB
 
 ## Instruções
 
@@ -44,8 +44,13 @@ Volte para a pasta root e digite:
 
 Agora é só iniciar os projetos manualmente:
 
-- Vá até a pasta `backend` e digite o comando: `sudo yarn start`
-- Vá até a pasta `frontend` e digite o comando: `sudo yarn start`
+- Vá até a pasta `backend` e digite os comando: 
+  1. `sudo yarn` para instalar as depedencias
+  2. `sudo yarn start` para iniciar o projeto
+   
+- Vá até a pasta `frontend` e digite o comando:
+  1. `sudo yarn` para instalar as depedencias
+  2. `sudo yarn start` para iniciar o projeto
 
 Pronto, ambos projetos devem estar rodando e conectados ao banco na nuvem com sucesso 
 
